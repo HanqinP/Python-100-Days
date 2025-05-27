@@ -7,6 +7,7 @@ def main():
     screen = pygame.display.set_mode((800, 600))
     pygame.display.set_caption('大球吃小球')
     x,y = 50, 50
+    
     running = True
     # 开启一个事件循环处理发生的事件
     while running:
