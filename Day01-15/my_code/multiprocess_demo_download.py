@@ -10,14 +10,14 @@ def download_task(filename):
     sleep(time_to_download)
     print('%s下载完成，耗费了%d秒' % (filename, time_to_download))
 
-def main_without_thread():
+def main_without_multiprocess():
     start = time()
     download_task('Python从入门到住院.pdf')
     download_task('Peking Hot.avi')
     end = time()
     print('总共耗费了%.2f秒' %(end - start))
 
-def main_with_thread():
+def main_with_multiprocess():
     start = time()
     p1 = Process(target=download_task, args=('Python从入门到住院.pdf', ))
     p1.start()
@@ -31,6 +31,6 @@ def main_with_thread():
 
 if __name__ == '__main__':
     print('Using single process....')
-    main_without_thread()
+    main_without_multiprocess()
     print('Using multiple processes....')
-    main_with_thread()
+    main_with_multiprocess()
