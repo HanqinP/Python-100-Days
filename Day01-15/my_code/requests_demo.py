@@ -17,7 +17,10 @@ class DownloadHandler(Thread):
 
 def main():
     APIKey = '1e4cedc848c4290ea48291578f54a2d0'
-    resp = requests.get('https://apis.tianapi.com/dgryl/index?key=APIKey')
+    resp = requests.get('https://apis.tianapi.com/dgryl/index?key='+APIKey)
 
     data_model = resp.json()
-    for mm_dict in data_model
+    print(data_model['result']['content'])
+
+if __name__ == '__main__':
+    main()
