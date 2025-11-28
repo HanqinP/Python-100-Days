@@ -7,7 +7,15 @@ def get_gcd(num1, num2):
     else:
         return get_gcd(num2, num1%num2)
 
+'''
+为什么 b 和 r 的公约数集合 = a 和 b 的公约数集合？
 
+因为：
+a=q⋅b+r
+如果一个数能整除 b 和 r，它一定能整除 a（因为它能整除 q·b 和 r）。
+反过来，如果一个数能整除 a 和 b，它也能整除 r（因为 r = a - q·b）。
+所以公约数集合在 (a, b) 和 (b, r) 之间保持一致。
+'''
 
 
 
