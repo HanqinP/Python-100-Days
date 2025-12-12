@@ -17,6 +17,11 @@ class Card:
         faces = ['', 'A', '2', '3', '4', '5', '6', '7', '8',
         '9', '10', 'J', 'Q', 'K']
         return f'{suites[self.suite.value]}{faces[self.face]}'
+    
+    def __lt__(self, other: Card ):
+        if self.suite == other.suite:
+            return self.face < other.face
+        return self.suite.value < other.suite.value
 
 
 class Poker:
